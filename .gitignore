@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+
+# Build output
+dist/
+
+# Vite / temp
+.vite/
+*.tmp
+
+# Editor / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Logs (from build/test harness)
+npm-install.log
+build.log
+dev.log
+*-status.txt
+*-done.flag
+*-fail.flag
+install-deps.bat
+poll-status.bat
+run-build.bat
+poll-build.bat

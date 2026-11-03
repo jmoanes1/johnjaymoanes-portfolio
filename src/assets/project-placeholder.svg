@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="100%" height="100%">
+  <defs>
+    <linearGradient id="holderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="accentBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="#F8FAFC"/>
+  <rect x="0" y="0" width="260" height="1000" fill="#0F172A"/>
+  <rect x="24" y="28" width="36" height="36" rx="10" fill="url(#accentBlue)"/>
+  <text x="72" y="52" fill="#FFFFFF" font-family="Inter, sans-serif" font-size="18" font-weight="700">FormTrack<tspan fill="#60A5FA">.io</tspan></text>
+  <rect x="260" y="0" width="1340" height="76" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <rect x="292" y="16" width="380" height="44" rx="10" fill="#F1F5F9"/>
+  <text x="340" y="44" fill="#94A3B8" font-family="Inter, sans-serif" font-size="14">Search forms, submissions, applicants...</text>
+  <rect x="292" y="120" width="1268" height="800" rx="16" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <text x="330" y="180" fill="#0F172A" font-family="Inter, sans-serif" font-size="28" font-weight="800">Form Tracker Overview</text>
+  <text x="330" y="210" fill="#64748B" font-family="Inter, sans-serif" font-size="15">Active Web Application Dashboard</text>
+</svg>
