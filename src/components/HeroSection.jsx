@@ -66,8 +66,6 @@ function HeroSection() {
         </div>
 
         {/* Social / Contact Links */}
-        {/* TODO: replace each "#" href with your real GitHub / LinkedIn profile
-            URLs and your email address (e.g. "mailto:you@domain.com"). */}
         <div className="mt-10 flex justify-center gap-5">
           <a
             href="https://github.com/jmoanes1"
@@ -79,7 +77,7 @@ function HeroSection() {
             <Github size={22} />
           </a>
           <a
-            href="#"
+            href="https://www.linkedin.com/in/johnjaymoanes-webdev"
             aria-label="LinkedIn"
             target="_blank"
             rel="noopener noreferrer"

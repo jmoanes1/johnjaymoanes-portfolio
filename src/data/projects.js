@@ -1,6 +1,6 @@
 import hrManagementSystem from '../assets/hr_management.png';
 import visitorRegistrationPreview from '../assets/visitor_registration.png';
-import gripOnChinaYuShanManagement from '../assets/grip-on-china-yu-shan-management.jpg';
+import expenseTracker from '../assets/expense_tracker.png';
 
 /**
  * Project data array.
@@ -45,16 +45,15 @@ const projects = [
   },
   {
     id: 3,
-    title: 'Grip op China – Yu Shan Management',
+    title: 'FinTrack – Expense Tracker',
     category: 'Web App',
-    badge: 'Web App',
     description:
-      'A clean, responsive corporate web application for a China consultancy, featuring intuitive navigation and an optimized layout for desktop and mobile.',
-    technologies: ['HTML', 'CSS', 'JavaScript'],
-    liveDemoUrl: '#',
-    githubUrl: '#',
-    image: gripOnChinaYuShanManagement,
-    imageAlt: 'High-resolution preview of Grip op China – Yu Shan Management corporate web application',
+      'A modern, responsive expense tracking dashboard with summary cards, income vs expenses charts, category breakdowns, and full transaction management.',
+    technologies: ['React', 'JavaScript', 'Tailwind CSS', 'Recharts', 'Vite'],
+    liveDemoUrl: 'https://expense-tracker-umber-one.vercel.app/',
+    githubUrl: 'https://github.com/jmoanes1/expense-tracker-dashboard',
+    image: expenseTracker,
+    imageAlt: 'Dashboard preview of the FinTrack expense tracker showing summary cards and income vs expenses charts',
   },
 ];
 
