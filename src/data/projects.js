@@ -18,11 +18,6 @@ const projects = [
     githubUrl: 'https://github.com/jmoanes1/hr_management_system',
     image: hrManagementSystem,
     imageAlt: 'High-resolution screenshot of the HR Management System dashboard',
-    demoAccount: {
-      username: 'demo',
-      password: 'yCAPYZ3nwMmK74B',
-      role: ' Admin',
-    },
   },
 
 
@@ -37,11 +32,6 @@ const projects = [
     githubUrl: 'https://github.com/jmoanes1/visitor_registration_management_system',
     image: visitorRegistrationPreview,
     imageAlt: 'Dashboard preview of the Visitor Registration Management System showing check-in metrics and recent visitor registrations',
-    demoAccount: {
-      username: 'admin',
-      password: 'admin123',
-      role: 'Administrator',
-    },
   },
   {
     id: 3,
