@@ -1,12 +1,22 @@
-import { Github, Linkedin } from 'lucide-react';
+import { ArrowDown, Github, Linkedin } from 'lucide-react';
+import profilePic from '../assets/profile.png';
 
 function HeroSection() {
   return (
     <section
       id="home"
-      className="flex min-h-screen w-full items-center justify-center bg-white px-6"
+      className="relative flex min-h-screen w-full items-center justify-center bg-white px-6 pb-24 pt-20"
     >
       <div className="mx-auto w-full max-w-3xl text-center">
+        {/* Profile photo */}
+        <div className="mb-8 flex justify-center">
+          <img
+            src={profilePic}
+            alt="Portrait of John Jay Moanes"
+            className="h-32 w-32 rounded-full object-cover shadow-md ring-2 ring-primary-dark/20 ring-offset-4 ring-offset-white sm:h-36 sm:w-36"
+          />
+        </div>
+
         {/* Headline */}
         <h1 className="text-4xl font-bold tracking-tight text-primary-dark sm:text-5xl lg:text-6xl">
           Hi, I&apos;m John Jay Moanes.
@@ -55,13 +65,25 @@ function HeroSection() {
           </a>
           <a
             href="/resume.pdf"
-            download="John-Jay-Moanes-Resume.pdf"
+            download="John-Jay-D.-Moanes-Resume.pdf"
             className="rounded-lg border border-primary-dark/70 px-6 py-2.5 text-xs font-semibold uppercase tracking-widest text-primary-dark transition-colors duration-200 hover:bg-primary-dark hover:text-white"
           >
             Resume
           </a>
         </div>
       </div>
+
+      {/* Scroll-down cue to Projects */}
+      <a
+        href="#projects"
+        aria-label="Scroll down to Projects"
+        className="group absolute bottom-6 left-1/2 flex -translate-x-1/2 flex-col items-center gap-1 text-primary-dark/60 transition-colors hover:text-primary-dark"
+      >
+        <span className="text-[10px] font-semibold uppercase tracking-widest">
+          Projects
+        </span>
+        <ArrowDown className="h-5 w-5 animate-bounce" />
+      </a>
     </section>
   );
 }

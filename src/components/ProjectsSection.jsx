@@ -3,7 +3,7 @@ import ProjectCard from './ProjectCard';
 
 function ProjectsSection() {
   return (
-    <section id="projects" className="w-full border-t border-gray-100 bg-white py-20 sm:py-24">
+    <section id="projects" className="w-full scroll-mt-20 border-t border-gray-100 bg-white py-20 sm:py-24">
       <div className="mx-auto max-w-6xl px-6">
         {/* Section Heading */}
         <div className="mb-12 text-center">

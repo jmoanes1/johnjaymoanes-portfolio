@@ -2,7 +2,7 @@ import { Mail, Phone } from 'lucide-react';
 
 function ContactSection() {
   return (
-    <section id="contact" className="w-full border-t border-gray-100 bg-white py-20 sm:py-24">
+    <section id="contact" className="w-full scroll-mt-20 border-t border-gray-100 bg-white py-20 sm:py-24">
       <div className="mx-auto max-w-3xl px-6 text-center">
         <span className="inline-block rounded-full border border-primary-dark/60 px-3.5 py-1 text-xs font-semibold uppercase tracking-widest text-primary-dark">
           Contact
