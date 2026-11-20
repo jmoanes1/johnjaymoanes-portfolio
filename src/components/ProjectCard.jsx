@@ -66,7 +66,10 @@ function ProjectCard({ project }) {
           {project.category || 'Web App'}
         </p>
 
-        <h3 className="mb-2.5 text-lg font-bold tracking-tight text-primary-dark">
+        <h3
+          title={project.title}
+          className="mb-2.5 truncate text-lg font-bold tracking-tight text-primary-dark"
+        >
           {project.title}
         </h3>
 
