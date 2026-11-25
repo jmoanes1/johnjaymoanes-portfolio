@@ -1,6 +1,7 @@
 import hrManagementSystem from '../assets/hr_management.png';
 import visitorRegistrationPreview from '../assets/visitor_registration.png';
 import expenseTracker from '../assets/expense_tracker.png';
+import shareSplitRent from '../assets/sharesplit_rent.png';
 
 /**
  * Project data array.
@@ -9,6 +10,18 @@ import expenseTracker from '../assets/expense_tracker.png';
 const projects = [
   {
     id: 1,
+    title: 'ShareSplit Rent',
+    category: 'Web App',
+    description:
+      'A rental marketplace and room-sharing platform featuring an admin dashboard for user verification queues, room listings, property management, and system health monitoring.',
+    technologies: ['Python', 'Django', 'Tailwind CSS', 'JavaScript', 'PostgreSQL'],
+    liveDemoUrl: 'https://splitshare-rent.onrender.com/',
+    githubUrl: 'https://github.com/jmoanes1/splitshare-rent',
+    image: shareSplitRent,
+    imageAlt: 'Platform overview dashboard of ShareSplit Rent showing marketplace metrics and verification queue',
+  },
+  {
+    id: 2,
     title: 'HR Management System',
     category: 'Web App',
     description:
@@ -19,10 +32,8 @@ const projects = [
     image: hrManagementSystem,
     imageAlt: 'High-resolution screenshot of the HR Management System dashboard',
   },
-
-
   {
-    id: 2,
+    id: 3,
     title: 'Visitor Registration Management System',
     category: 'Web App',
     description:
@@ -34,7 +45,7 @@ const projects = [
     imageAlt: 'Dashboard preview of the Visitor Registration Management System showing check-in metrics and recent visitor registrations',
   },
   {
-    id: 3,
+    id: 4,
     title: 'FinTrack – Expense Tracker',
     category: 'Web App',
     description:
