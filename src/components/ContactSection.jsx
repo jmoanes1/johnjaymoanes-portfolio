@@ -1,34 +1,130 @@
-import { Mail, Phone } from 'lucide-react';
+import { useState } from 'react';
+import { Mail, Phone, MapPin, Copy, Check, ArrowUpRight } from 'lucide-react';
 
 function ContactSection() {
-  return (
-    <section id="contact" className="w-full scroll-mt-20 border-t border-gray-100 bg-white py-20 transition-colors duration-300 dark:border-slate-800/80 dark:bg-slate-950 sm:py-24">
-      <div className="mx-auto max-w-3xl px-6 text-center">
-        <span className="inline-block rounded-full border border-primary-dark/60 px-3.5 py-1 text-xs font-semibold uppercase tracking-widest text-primary-dark transition-colors dark:border-blue-400/60 dark:text-blue-400">
-          Contact
-        </span>
-        <h2 className="mt-4 text-3xl font-bold tracking-tight text-primary-dark transition-colors dark:text-white sm:text-4xl">
-          Get In Touch
-        </h2>
-        <p className="mt-4 text-base leading-relaxed text-gray-600 transition-colors dark:text-slate-400">
-          Have a question or want to work together? Feel free to reach out anytime.
-        </p>
+  const [copiedEmail, setCopiedEmail] = useState(false);
+  const [copiedPhone, setCopiedPhone] = useState(false);
 
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-          <a
-            href="mailto:johnjaymoanes25@gmail.com"
-            className="inline-flex items-center gap-2.5 rounded-xl border border-gray-300 bg-white px-6 py-3 text-xs font-semibold uppercase tracking-wider text-primary-dark shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-gray-50 hover:shadow-md dark:border-slate-800 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800"
-          >
-            <Mail className="h-4 w-4 text-primary dark:text-blue-400" />
-            johnjaymoanes25@gmail.com
-          </a>
-          <a
-            href="tel:09923811486"
-            className="inline-flex items-center gap-2.5 rounded-xl border border-gray-300 bg-white px-6 py-3 text-xs font-semibold uppercase tracking-wider text-primary-dark shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-gray-50 hover:shadow-md dark:border-slate-800 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800"
-          >
-            <Phone className="h-4 w-4 text-primary dark:text-blue-400" />
-            09923811486
-          </a>
+  const copyToClipboard = (text, type) => {
+    navigator.clipboard.writeText(text);
+    if (type === 'email') {
+      setCopiedEmail(true);
+      setTimeout(() => setCopiedEmail(false), 2000);
+    } else {
+      setCopiedPhone(true);
+      setTimeout(() => setCopiedPhone(false), 2000);
+    }
+  };
+
+  return (
+    <section id="contact" className="relative w-full scroll-mt-24 border-t border-slate-900 bg-slate-950 py-24 sm:py-32">
+      <div className="mx-auto max-w-4xl px-6">
+        {/* Section Header */}
+        <div className="mb-14 text-center">
+          <span className="text-xs font-semibold uppercase tracking-widest text-blue-400">
+            Let&apos;s Connect
+          </span>
+          <h2 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Get In Touch
+          </h2>
+          <p className="mx-auto mt-4 max-w-lg text-sm leading-relaxed text-slate-400 sm:text-base">
+            Have a project in mind, an open position, or just want to discuss web development? I&apos;m always glad to talk.
+          </p>
+        </div>
+
+        {/* Clean Contact Cards Grid */}
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          {/* Email Card */}
+          <div className="group relative flex flex-col justify-between rounded-2xl border border-slate-800/80 bg-slate-900/40 p-6 backdrop-blur-sm transition-all duration-300 hover:border-slate-700 hover:bg-slate-900/70">
+            <div>
+              <div className="mb-4 flex items-center justify-between">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-500/10 text-blue-400 ring-1 ring-blue-500/20">
+                  <Mail size={18} />
+                </div>
+                <button
+                  type="button"
+                  onClick={() => copyToClipboard('johnjaymoanes25@gmail.com', 'email')}
+                  title="Copy email address"
+                  className="flex items-center gap-1 rounded-full border border-slate-800 bg-slate-950/80 px-2.5 py-1 text-[11px] font-medium text-slate-400 transition-colors hover:border-slate-700 hover:text-white"
+                >
+                  {copiedEmail ? (
+                    <>
+                      <Check size={12} className="text-emerald-400" />
+                      <span className="text-emerald-400">Copied</span>
+                    </>
+                  ) : (
+                    <>
+                      <Copy size={12} />
+                      <span>Copy</span>
+                    </>
+                  )}
+                </button>
+              </div>
+              <p className="text-xs font-medium uppercase tracking-wider text-slate-500">Email Me</p>
+              <h3 className="mt-1 break-all text-base font-semibold text-white">
+                johnjaymoanes25@gmail.com
+              </h3>
+            </div>
+
+            <div className="mt-6 pt-4 border-t border-slate-800/60">
+              <a
+                href="mailto:johnjaymoanes25@gmail.com"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-400 transition-colors hover:text-blue-300"
+              >
+                <span>Compose email</span>
+                <ArrowUpRight size={14} />
+              </a>
+            </div>
+          </div>
+
+          {/* Phone Card */}
+          <div className="group relative flex flex-col justify-between rounded-2xl border border-slate-800/80 bg-slate-900/40 p-6 backdrop-blur-sm transition-all duration-300 hover:border-slate-700 hover:bg-slate-900/70">
+            <div>
+              <div className="mb-4 flex items-center justify-between">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-400 ring-1 ring-emerald-500/20">
+                  <Phone size={18} />
+                </div>
+                <button
+                  type="button"
+                  onClick={() => copyToClipboard('09923811486', 'phone')}
+                  title="Copy phone number"
+                  className="flex items-center gap-1 rounded-full border border-slate-800 bg-slate-950/80 px-2.5 py-1 text-[11px] font-medium text-slate-400 transition-colors hover:border-slate-700 hover:text-white"
+                >
+                  {copiedPhone ? (
+                    <>
+                      <Check size={12} className="text-emerald-400" />
+                      <span className="text-emerald-400">Copied</span>
+                    </>
+                  ) : (
+                    <>
+                      <Copy size={12} />
+                      <span>Copy</span>
+                    </>
+                  )}
+                </button>
+              </div>
+              <p className="text-xs font-medium uppercase tracking-wider text-slate-500">Direct Call</p>
+              <h3 className="mt-1 text-base font-semibold text-white">
+                +63 992 381 1486
+              </h3>
+            </div>
+
+            <div className="mt-6 pt-4 border-t border-slate-800/60">
+              <a
+                href="tel:09923811486"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-400 transition-colors hover:text-emerald-300"
+              >
+                <span>Call number</span>
+                <ArrowUpRight size={14} />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Location Note */}
+        <div className="mt-6 flex items-center justify-center gap-2 text-xs text-slate-500">
+          <MapPin size={14} className="text-slate-400" />
+          <span>Makati City, Philippines • Available for Remote & On-site roles</span>
         </div>
       </div>
     </section>
