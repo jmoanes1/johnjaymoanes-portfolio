@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply bg-white text-primary-dark antialiased;
+    @apply bg-white text-primary-dark antialiased transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100;
     font-family: 'Inter', ui-sans, system-ui, sans-serif;
   }
 }
@@ -17,4 +17,9 @@
 ::selection {
   background-color: rgba(59, 130, 246, 0.3);
   color: #142D4E;
+}
+
+.dark ::selection {
+  background-color: rgba(59, 130, 246, 0.4);
+  color: #ffffff;
 }
